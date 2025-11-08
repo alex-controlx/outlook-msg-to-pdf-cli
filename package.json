@@ -1,0 +1,26 @@
+{
+  "name": "outlook-msg-to-pdf-cli",
+  "description": "Convert Outlook `.msg` files to self-contained PDFs with embedded images and merged PDF attachments.",
+  "version": "1.0.0",
+  "type": "module",
+  "author": "Alex Sharikov with Cursor AI",
+  "license": "MIT",
+  "homepage": "https://github.com/controlx-io/outlook-msg-to-pdf-cli.git",
+  "bin": {
+    "msg-to-pdf": "./msg-to-pdf.ts"
+  },
+  "scripts": {
+    "start": "bun run msg-to-pdf.ts",
+    "build": "mkdir -p build && bun build msg-to-pdf.ts --compile --outfile build/msg-to-pdf"
+  },
+  "dependencies": {
+    "@molotochok/msg-viewer": "^1.0.3",
+    "puppeteer": "^23.11.1",
+    "pdf-lib": "^1.17.1"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "typescript": "^5.0.0"
+  }
+}
+
