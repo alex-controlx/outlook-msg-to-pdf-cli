@@ -9,9 +9,17 @@ Convert Outlook `.msg` files to self-contained PDFs with embedded images and mer
 - 📎 PDF attachments automatically merged
 - 🌏 Unicode support (Chinese characters, etc.)
 - ⚡ Fast conversion with Puppeteer
-- 📦 Standalone 71MB binary (includes Chromium)
+- 📦 Standalone binary (includes Chromium)
 
-## Installation
+## Download
+
+Download pre-built binaries from the [Releases](../../releases) page:
+- `msg-to-pdf-linux-x64` - Linux x64
+- `msg-to-pdf-macos-arm64` - macOS Apple Silicon
+- `msg-to-pdf-macos-x64` - macOS Intel
+- `msg-to-pdf-windows-x64.exe` - Windows x64
+
+Or build from source:
 
 ```bash
 bun install
@@ -63,4 +71,16 @@ Each PDF contains:
 ```
 
 Creates `Container contents.pdf` in the same directory with all images and attachments embedded.
+
+## How to Create a Release
+
+1. Create and push a git tag:
+```bash
+git tag v1.0.0
+git push origin v1.0.0
+```
+
+2. GitHub Actions will automatically build binaries for all platforms and create a release
+
+3. Download the binaries from the Releases page
 
